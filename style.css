@@ -85,6 +85,7 @@ p {
   border: 1px solid var(--border-color);
   border-radius: 4px;
   background: #fff;
+  color: #333; /* Changed text color to dark grey */
 }
 
 .currency input {
@@ -100,7 +101,20 @@ p {
 
 .rate {
   font-size: 16px;
-  color: var(--secondary-color);
+  color: #666; /* Changed text color to dark grey */
+}
+
+.swap-btn {
+  background: #666; /* Changed background color to dark grey */
+  color: #fff; /* Changed text color to white */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.swap-btn:hover {
+  background: #555; /* Changed hover background color to dark grey */
 }
 
 /* Responsive design */
