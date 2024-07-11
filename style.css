@@ -1,114 +1,141 @@
 :root {
-    --primary-color: #007bff;  /* A modern blue */
-    --secondary-color: #6c757d; /* Complementary grey */
-    --background-color: #f8f9fa; /* Light grey background */
-    --text-color: #343a40;  /* Dark grey text */
-    --border-color: #ced4da; /* Light border color */
+  --primary-color: #F5F5DC; /* Beige */
+  --secondary-color: #964B00; /* Dark brown */
+  --background-color: #F0F0F0; /* Light beige background */
+  --text-color: #333; /* Dark grey text */
+  --border-color: #ccc; /* Light grey border */
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow */
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--background-color);
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-    color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: var(--text-color);
 }
 
 h1 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
 p {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .btn {
-    color: #fff;
-    background: var(--primary-color);
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 8px 16px;
-    border: none;
-    transition: background 0.3s ease;
+  color: #fff;
+  background: var(--primary-color);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  transition: background 0.3s ease;
+  box-shadow: var(--box-shadow);
 }
 
 .btn:hover {
-    background: darken(var(--primary-color), 10%);
+  background: darken(var(--primary-color), 10%);
 }
 
 .btn:focus {
-    outline: none;
+  outline: none;
 }
 
 .money-img {
-    width: 120px;
-    margin-bottom: 20px;
+  width: 120px;
+  margin-bottom: 20px;
 }
 
 .container {
-    width: 100%;
-    max-width: 500px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
 }
 
 .currency {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .currency select,
 .currency input {
-    width: 45%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    background: #fff;
+  width: 45%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: #fff;
 }
 
 .currency input {
-    text-align: right;
+  text-align: right;
 }
 
 .swap-rate-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .rate {
-    font-size: 16px;
-    color: var(--secondary-color);
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+/* Responsive design */
+
+@media (max-width: 1200px) {
+ .container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+ .container {
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 600px) {
-    .currency {
-        flex-direction: column;
-    }
+ .currency {
+    flex-direction: column;
+  }
 
-    .currency select,
-    .currency input {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+ .currency select,
+ .currency input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+ .container {
+    padding: 10px;
+  }
+
+ .currency select,
+ .currency input {
+    padding: 8px;
+  }
 }
