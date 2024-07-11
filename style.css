@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #F5F5DC; /* Beige */
-  --secondary-color: #964B00; /* Dark brown */
+  --primary-color: #964B00; /* Dark brown for better contrast */
+  --secondary-color: #F5F5DC; /* Beige */
   --background-color: #F0F0F0; /* Light beige background */
   --text-color: #333; /* Dark grey text */
   --border-color: #ccc; /* Light grey border */
@@ -49,7 +49,7 @@ p {
 }
 
 .btn:hover {
-  background: darken(var(--primary-color), 10%);
+  background: #7e3e00; /* Slightly darker brown for hover */
 }
 
 .btn:focus {
@@ -105,8 +105,8 @@ p {
 }
 
 .swap-btn {
-  background: #666; /* Changed background color to dark grey */
-  color: #fff; /* Changed text color to white */
+  background: var(--primary-color); /* Dark brown */
+  color: #fff; /* White text for visibility */
   padding: 8px 16px;
   border: none;
   border-radius: 5px;
@@ -114,7 +114,7 @@ p {
 }
 
 .swap-btn:hover {
-  background: #555; /* Changed hover background color to dark grey */
+  background: #7e3e00; /* Slightly darker brown for hover */
 }
 
 /* Responsive design */
