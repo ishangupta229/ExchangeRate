@@ -28,11 +28,11 @@ amtEl_one.addEventListener('input', calculate);
 curEl_two.addEventListener('change', calculate);
 amtEl_two.addEventListener('input', calculate);
 
-swap.addEventListener('click', () =>{
+swap.addEventListener('click', () => {
     const temp = curEl_one.value;
-    curEl_one.value=curEl_two.value
-    curEl_two.value=temp;
+    curEl_one.value = curEl_two.value;
+    curEl_two.value = temp;
     calculate();
-})
+});
 
 calculate();
